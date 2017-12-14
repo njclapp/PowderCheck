@@ -12,9 +12,7 @@
 # TODO: text to multiple people, figure out why text shows a period at the end
 
 # Version 1.2
-# Added support for multiple people(brackets around msg_to) -- finished 12/29/15
-# Period at the end of texts seems to be normal
-
+# Added support for multiple people(brackets around msg_to) -- finished 12/29/15 # Period at the end of texts seems to be normal 
 # Link for grab - http://www.powdervalleyinc.com/hodgdon.shtml
 
 #Libraries for email/text
@@ -57,7 +55,7 @@ def email():
 def main():
 	#imports HTML and adds it to soup
 	r = requests.get('http://www.powdervalleyinc.com/hodgdon.shtml')
-	soup = BeautifulSoup(r.content)
+	soup = BeautifulSoup(r.content, "html.parser")
 	
 	powder = []
 	stock = []
@@ -87,8 +85,8 @@ def main():
 		i+=1
 
 	# If stock is found, email is called
-	if count >= 1:
-		email()
+#	if count >= 1:
+	#	email()
 
 if __name__ == '__main__':
 	main()
