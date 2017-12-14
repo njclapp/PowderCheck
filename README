@@ -1,0 +1,14 @@
+===========
+To Install
+===========
+
+1. Run 'sudo python setup.py install' to install dependancies
+
+2. Update email address in powdercheck.py
+
+
+=================
+CONTRIBUTORS
+=================
+
+Nate Clapp
